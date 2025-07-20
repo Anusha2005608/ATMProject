@@ -1,0 +1,103 @@
+import java.util.Scanner;
+
+public class AllIfprograms {
+    Scanner sc=new Scanner(System.in);
+    void SimpleIf(){
+        System.out.println("enter the any number");
+        int no=sc.nextInt();
+        if(no%2==0)
+            System.out.println("even no");
+    }
+    void ifelse(){
+        System.out.println("enter the single character");
+        char ch=sc.next().charAt(0);
+        if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u' || ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch=='U' )
+            System.out.println("vowels");
+        else
+            System.out.println("consonent");
+    }
+    void ifelseifladder(){
+        System.out.println("enter any number");
+        int n=sc.nextInt();
+        if(n>=0 & n<=9)
+            System.out.println("single digit");
+        else if(n>=10 & n<=99)
+            System.out.println("Two digit");
+        else if(n>=100 & n<=999)
+            System.out.println("Three digit");
+        else
+            System.out.println("out of range");
+    }
+    void nestedIf(){
+        System.out.println("enter student sname");
+        String sname=sc.next();
+        System.out.println("enter student sid");
+        String sid=sc.next();
+        System.out.println("enter java,python,c marks");
+        int java=sc.nextInt();
+        int python=sc.nextInt();
+        int c=sc.nextInt();
+        int total=java+python+c;
+        double avg=total/3;
+        //rule 1
+        if(java<0||java>100||python<0||python>100||c<0||c>100){
+            System.out.println("out of range of your marks");
+            System.exit(0);
+        }
+        System.out.println("student name is="+sname);
+        System.out.println("student id is="+sid);
+        System.out.println("student java marks is="+java);
+        System.out.println("student python marks is="+python);
+        System.out.println("student c marks is="+c);
+        System.out.println("student total marks is="+total);
+        System.out.println("student average marks is="+avg);
+        //rule 2
+        if(java>=35 && python>=35 && c>=35){
+            System.out.println("Result is=pass");
+            if(avg>=90)
+                System.out.println("Grade is=0");
+            else if(avg>=70)
+                System.out.println("Grade is=A");
+            else if(avg>=50)
+                System.out.println("Grade is =B");
+            else
+                System.out.println("Grade is=c");
+        }
+            else
+            {
+            System.out.println("Result is=Fail");
+            System.out.println("Grade is=F");
+            }
+    }
+    public static class IfProject{
+        public static void main(String[] args){
+            AllIfprograms ae=new AllIfprograms();
+            //ae.SimpleIf();
+            //ae.ifelse();
+            //ae.ifelseifladder();
+            ae.nestedIf();
+        }
+    }
+}
+OUTPUT:
+C:\Users\VITHOBA\.jdks\openjdk-24.0.1\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2025.1.3\lib\idea_rt.jar=57901" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\VITHOBA\IdeaProjects\Anusha\out\production\Anusha AllIfprograms$IfProject
+enter student sname
+Anusha
+enter student sid
+526
+enter java,python,c marks
+40
+50
+60
+student name is=Anusha
+student id is=526
+student java marks is=40
+student python marks is=50
+student c marks is=60
+student total marks is=150
+student average marks is=50.0
+Result is=pass
+Grade is =B
+
+Process finished with exit code 0
+
